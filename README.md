@@ -22,10 +22,10 @@ Natslive is a dynamic event router that connects different message sources and d
 
 ## Documentation
 
-- [Introduction & Core Concepts](https://github.com/ha1tch/natslive/blob/main/natslive-01-intro.md)
-- [Transport Layer Details](https://github.com/ha1tch/natslive/blob/main/natslive-02-transport.md)
-- [Rule Expression Language](https://github.com/ha1tch/natslive/blob/main/natslive-03-nrel.md)
-- [Binary Bundling Strategy](https://github.com/ha1tch/natslive/blob/main/natslive-04-bundling.md)
+- [Introduction & Core Concepts](https://github.com/ha1tch/natslive/blob/main/doc/natslive-01-intro.md)
+- [Transport Layer Details](https://github.com/ha1tch/natslive/blob/main/doc/natslive-02-transport.md)
+- [Rule Expression Language](https://github.com/ha1tch/natslive/blob/main/doc/natslive-03-nrel.md)
+- [Binary Bundling Strategy](https://github.com/ha1tch/natslive/blob/main/doc/natslive-04-bundling.md)
 
 ## License
 
