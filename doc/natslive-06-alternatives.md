@@ -67,6 +67,36 @@ Operate without requiring HTTP—every core operation happens inside NATS, which
 - **Limitations**: Very large footprint, complex setup, not suitable for edge or embedded use
 - **Best for**: Data flow orchestration with visual design requirements
 
+## NiFi-to-WREL Integration Potential
+
+While Apache NiFi and Natslive represent different approaches to event processing, there's an interesting potential for integration: NiFi's visual flow designs could be translated into WREL modules, creating a bridge between NiFi's visual programming model and Natslive's lightweight execution environment.
+
+### How This Could Work
+
+1. **NiFi as the Design Environment**:
+   - Use NiFi's rich visual editor to design data transformation and filtering logic
+   - Leverage NiFi's extensive processor library for complex transformations
+   - Validate flows using NiFi's built-in testing capabilities
+
+2. **Translation Layer**:
+   - Create a specialized NiFi processor that exports flow segments as WREL code
+   - Convert NiFi processor chains to equivalent JavaScript, Rust, or other WASM-compatible code
+   - Map NiFi's Expression Language to WREL execution semantics
+
+3. **WREL Execution**:
+   - Deploy the translated code as WREL modules in Natslive
+   - Execute the logic in lightweight, sandboxed environments
+   - Distribute processing across edge and cloud environments
+
+### Benefits of This Approach
+
+- **Design Once, Run Anywhere**: Design in NiFi's comprehensive UI, but execute on lightweight Natslive nodes
+- **Edge Execution**: Take flows designed in NiFi and run them on edge devices without the full NiFi footprint
+- **Incremental Migration**: Gradually move processing from centralized NiFi clusters to distributed Natslive routers
+- **Best of Both Worlds**: Combine NiFi's rich design capabilities with Natslive's efficient execution model
+
+This integration shifts the comparison between NiFi and Natslive from "either/or" to "better together" for certain use cases. Organizations could leverage both: NiFi for its comprehensive design environment and processor library, and Natslive for lightweight, distributed execution.
+
 ## Feature Comparison Matrix
 
 | Feature                            | Natslive | EventBridge | Knative | NiFi | Temporal |
@@ -114,8 +144,16 @@ Operate without requiring HTTP—every core operation happens inside NATS, which
 - If visual flow design is important: **NiFi**
 - If primarily needing message routing with flexible filtering: **Natslive**
 
+### For Visual Design with Edge Execution
+**Best option: NiFi + Natslive integration**
+- Design flows visually in NiFi
+- Translate to WREL for lightweight execution
+- Deploy on edge devices or distributed environments
+
 ## Conclusion
 
 Natslive occupies a unique position in the event routing ecosystem by combining lightweight architecture, protocol flexibility, and advanced filtering capabilities. Its particular strengths in edge deployments, protocol bridging, and WebAssembly-based rule execution make it especially valuable for organizations with heterogeneous infrastructure, hybrid deployments, or resource-constrained environments.
 
 While cloud-provided solutions offer better integration with their specific platforms and Knative provides advantages in pure Kubernetes environments, Natslive excels when independence from specific infrastructure, lightweight operation, or cross-protocol routing are priorities.
+
+The potential integration with technologies like Apache NiFi further extends Natslive's versatility, allowing organizations to leverage the strengths of multiple tools rather than being forced to choose between them.
