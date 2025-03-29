@@ -31,6 +31,7 @@ With WREL (WASM Rule Expression Language), Natslive evolves from a static router
 - [Binary Bundling Strategy](https://github.com/ha1tch/natslive/blob/main/doc/natslive-04-bundling.md)
 - [WASM Rule Expression Language](https://github.com/ha1tch/natslive/blob/main/doc/natslive-05-wrel.md)
 - [Comparison with Alternatives](https://github.com/ha1tch/natslive/blob/main/doc/natslive-06-alternatives.md)
+- [Use Cases](https://github.com/ha1tch/natslive/blob/main/doc/natslive-07-use-cases.md)
 
 ## License
 
